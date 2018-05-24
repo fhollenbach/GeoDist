@@ -4,7 +4,6 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 Rcpp::NumericVector calcDist(Rcpp::NumericMatrix latlon) {
     int nR = latlon.nrow();
-    int nC = latlon.cols();
     Rcpp::NumericMatrix dists(nR, nR);
     
     for (int r = 0; r < nR; r++) {;
