@@ -1,0 +1,61 @@
+## ############
+## dependencies
+## ############
+library(Rcpp)
+set.seed(1)
+
+if(
+  Sys.info()["user"]=="florianhollenbach")
+  {
+  setwd("~/Documents/GitHub/BigData.Reshape/")
+}
+## ######
+## params
+## ######
+nV <- 2
+                                        # currently nothing more than 1v used
+nE <- 116e3
+nD <- 10
+
+## ###############
+## simulate events
+## ###############
+dfE <- data.frame(id = 1:nE,
+                  etype = sample(letters[1:10], size = nE, replace = TRUE),
+                  d = sample(1:nD, size = nE, replace = TRUE),
+                  x = runif(nE, -10, 10),
+                  y = runif(nE, -10, 10)
+                  )
+
+## ##############
+## simulate vills
+## ##############
+dfV <- data.frame(id = 1:nV,
+                  x = runif(nV, 4, 8),
+                  y = runif(nV, -3, 2)
+                  )
+
+
+## #######
+## compile
+## #######
+sourceCpp(file = "calcDist_Geo.cpp")
+
+
+## #########
+## time demo
+## #########
+system.time({
+    tmp <- calcDist_Geo(xy = as.matrix(dfE[, 4:5]),
+                    refx = dfV$x[1],
+                    refy = dfV$y[1]
+                    )
+}
+            )
+
+
+### check for first number, with rfields function
+rdist.earth(dfE[1:1, c(4,5)],matrix(c(dfV$x[1],dfV$y[1]), ncol=2),miles=FALSE, R=6371)
+
+length(tmp)
+summary(tmp)

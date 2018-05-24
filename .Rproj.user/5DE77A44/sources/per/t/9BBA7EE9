@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527188108142.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3877430414",
+    "id" : "9BBA7EE9",
+    "lastKnownWriteTime" : 1438269189,
+    "last_content_update" : 1438269189,
+    "path" : "~/Documents/GitHub/BigData.Reshape/example.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "53,0",
+        "scrollLine" : "35"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
