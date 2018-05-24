@@ -3,8 +3,7 @@
 \alias{GeoDist}
 \docType{package}
 \title{
-GeoDist allows users to calculate pairwise distances between a vector of points with itself or with a point using the Haversine formula. 
-
+GeoDist allows users to calculate pairwise distances for a vector of points
 }
 \description{
 Given a matrix with latitude and longitude for points and latitude and longitude of a point, the GeoDist package calculates pairwise distances between the vector of points and itself or a different point. Distance output is in kilometers, based on the Haversine formula. 
@@ -28,12 +27,11 @@ Maintainer: <florian.hollenbach@tamu.edu>
 \keyword{distance, spatial}
 \seealso{Paskages: geosphere, geom}
 \examples{
-
 N <- 200
 ## ###############
 ## simulate points
 ## ###############
-data <- data.frame(id = N, runif(N, -10, 10), runif(N, -10, 10)/)
+data <- data.frame(id = N, runif(N, -10, 10), runif(N, -10, 10))
 
 ## ##############
 ## simulate another set of points
@@ -41,10 +39,10 @@ data <- data.frame(id = N, runif(N, -10, 10), runif(N, -10, 10)/)
 point <- runif(2, -20, 20)
 
 ##Distance Calculation with one point
-dist <- calcDist_Geo(xy = as.matrix(data),
-                    refx = point[1],
-                    refy = point[2])
+dist <- calcDist_Geo(latlon = as.matrix(data),
+                    lat = point[1],
+                    lon = point[2])
 
 ## Distance calculation for all points with themselves
-dist <- calcDist(xy = as.matrix(data))
+dist <- calcDist(latlon = as.matrix(data))
 }

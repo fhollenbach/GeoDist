@@ -7,69 +7,26 @@
 using namespace Rcpp;
 
 // calcDist_Geo
-Rcpp::NumericVector calcDist_Geo(Rcpp::NumericMatrix xy, double refx, double refy);
-RcppExport SEXP _GeoDist_calcDist_Geo(SEXP xySEXP, SEXP refxSEXP, SEXP refySEXP) {
+Rcpp::NumericVector calcDist_Geo(Rcpp::NumericMatrix latlon, double lat, double lon);
+RcppExport SEXP _GeoDist_calcDist_Geo(SEXP latlonSEXP, SEXP latSEXP, SEXP lonSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type xy(xySEXP);
-    Rcpp::traits::input_parameter< double >::type refx(refxSEXP);
-    Rcpp::traits::input_parameter< double >::type refy(refySEXP);
-    rcpp_result_gen = Rcpp::wrap(calcDist_Geo(xy, refx, refy));
+    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type latlon(latlonSEXP);
+    Rcpp::traits::input_parameter< double >::type lat(latSEXP);
+    Rcpp::traits::input_parameter< double >::type lon(lonSEXP);
+    rcpp_result_gen = Rcpp::wrap(calcDist_Geo(latlon, lat, lon));
     return rcpp_result_gen;
 END_RCPP
 }
 // calcDist
-Rcpp::NumericVector calcDist(Rcpp::NumericMatrix xy);
-RcppExport SEXP _GeoDist_calcDist(SEXP xySEXP) {
+Rcpp::NumericVector calcDist(Rcpp::NumericMatrix latlon);
+RcppExport SEXP _GeoDist_calcDist(SEXP latlonSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type xy(xySEXP);
-    rcpp_result_gen = Rcpp::wrap(calcDist(xy));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_hello_world
-arma::mat rcpparma_hello_world();
-RcppExport SEXP _GeoDist_rcpparma_hello_world() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpparma_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_outerproduct
-arma::mat rcpparma_outerproduct(const arma::colvec& x);
-RcppExport SEXP _GeoDist_rcpparma_outerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_outerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_innerproduct
-double rcpparma_innerproduct(const arma::colvec& x);
-RcppExport SEXP _GeoDist_rcpparma_innerproduct(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_innerproduct(x));
-    return rcpp_result_gen;
-END_RCPP
-}
-// rcpparma_bothproducts
-Rcpp::List rcpparma_bothproducts(const arma::colvec& x);
-RcppExport SEXP _GeoDist_rcpparma_bothproducts(SEXP xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const arma::colvec& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpparma_bothproducts(x));
+    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type latlon(latlonSEXP);
+    rcpp_result_gen = Rcpp::wrap(calcDist(latlon));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -77,10 +34,6 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_GeoDist_calcDist_Geo", (DL_FUNC) &_GeoDist_calcDist_Geo, 3},
     {"_GeoDist_calcDist", (DL_FUNC) &_GeoDist_calcDist, 1},
-    {"_GeoDist_rcpparma_hello_world", (DL_FUNC) &_GeoDist_rcpparma_hello_world, 0},
-    {"_GeoDist_rcpparma_outerproduct", (DL_FUNC) &_GeoDist_rcpparma_outerproduct, 1},
-    {"_GeoDist_rcpparma_innerproduct", (DL_FUNC) &_GeoDist_rcpparma_innerproduct, 1},
-    {"_GeoDist_rcpparma_bothproducts", (DL_FUNC) &_GeoDist_rcpparma_bothproducts, 1},
     {NULL, NULL, 0}
 };
 
