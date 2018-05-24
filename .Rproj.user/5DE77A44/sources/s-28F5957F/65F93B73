@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1527184432565.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1792322689",
+    "id" : "65F93B73",
+    "lastKnownWriteTime" : 1527184955,
+    "last_content_update" : 1527184955950,
+    "path" : "~/Documents/GitHub/GeoDist/man/GeoDist-package.Rd",
+    "project_path" : "man/GeoDist-package.Rd",
+    "properties" : {
+        "cursorPosition" : "28,9",
+        "scrollLine" : "13"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_doc"
+}

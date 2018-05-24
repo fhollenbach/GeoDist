@@ -1,0 +1,74 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 21,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/calcDist.cpp",
+                "kind" : 6,
+                "line" : 5,
+                "name" : "calcDist(Rcpp::NumericMatrix)",
+                "parent_name" : "",
+                "usr" : "c:@F@calcDist#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            }
+        ],
+        "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/calcDist.cpp",
+        "file_last_write" : 1527182970
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 21,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/calcDist_Geo.cpp",
+                "kind" : 6,
+                "line" : 5,
+                "name" : "calcDist_Geo(Rcpp::NumericMatrix, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@calcDist_Geo#$@N@Rcpp@C@Matrix>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#d#d#"
+            }
+        ],
+        "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/calcDist_Geo.cpp",
+        "file_last_write" : 1527182945
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 11,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 18,
+                "name" : "rcpparma_hello_world",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_hello_world#"
+            },
+            {
+                "column" : 11,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 30,
+                "name" : "rcpparma_outerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_outerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 38,
+                "name" : "rcpparma_innerproduct(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_innerproduct#&1$@N@arma@C@Col>#d#"
+            },
+            {
+                "column" : 12,
+                "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/rcpparma_hello_world.cpp",
+                "kind" : 6,
+                "line" : 47,
+                "name" : "rcpparma_bothproducts(const arma::colvec &)",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpparma_bothproducts#&1$@N@arma@C@Col>#d#"
+            }
+        ],
+        "file" : "/Users/florianhollenbach/Documents/GitHub/GeoDist/src/rcpparma_hello_world.cpp",
+        "file_last_write" : 1527184283
+    }
+]

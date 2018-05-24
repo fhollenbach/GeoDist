@@ -1,0 +1,11 @@
+Package: GeoDist
+Type: Package
+Title: GeoDist allows users to calculate pairwise distances of points in a vector of points or with a separate point. Distances are in kilometers and calculated using the Haversine formula. 
+Version: 0.1
+Date: 2018-05-24
+Author: Florian M. Hollenbach
+Maintainer: Florian M. Hollenbach <fhollenbach@tamu.edu>
+Description: Given a matrix with latitude and longitude for points, the GeoDist package calculates pairwise distances of points in vector or with a different point. Distance output is in kilometers, based on the Haversine formula. 
+License: GNU GPLv3
+Imports: Rcpp (>= 0.12.16)
+LinkingTo: Rcpp, RcppArmadillo
